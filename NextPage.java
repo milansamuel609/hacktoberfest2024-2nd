@@ -54,13 +54,13 @@ class NextPage extends Template implements ActionListener
  this.setVisible(false);
  try
  {
- MarvellousPackFront obj = new MarvellousPackFront();
+ PackFront obj = new PackFront();
  }
  catch(Exception e){}
  }
  if ( ae.getSource() == unpack )
  {
  this.setVisible(false);
- MarvellousUnpackFront obj = new MarvellousUnpackFront(); }
+ UnpackFront obj = new UnpackFront(); }
  }
 }

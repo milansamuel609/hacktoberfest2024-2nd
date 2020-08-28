@@ -82,7 +82,7 @@ getContentPane().add(_header,new GridBagConstraints(0,1,1,1,1,20,GridBagConstrai
  jsp.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
 
  getContentPane().add(jsp,new GridBagConstraints(0,2,1,1,1,75,GridBagConstraints.BASELINE,GridBagConstraints.BOTH,new Insets(0,0,0,0),0,0));
- setTitle("Marvellous Packer-Unpacker");
+ setTitle("File Packer-Unpacker");
 
  Clock();
  CloseAndMin();
