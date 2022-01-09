@@ -52,8 +52,6 @@ class Login extends Template implements ActionListener, Runnable
  text2.setToolTipText("ENTER PASSWORD");
  text2.addFocusListener(new FocusListener()
  {
- public void focusGained(FocusEvent e)
- {}
  public void focusLost(FocusEvent e)
  {
     label3.setText("");
