@@ -7,8 +7,12 @@ import javax.swing.JLabel;
 class Login extends Template implements ActionListener, Runnable
 {
  JButton SUBMIT;
- JLabel label1,label2,label3,TopLabel;
- final JTextField text1,text2;
+ JLabel label1;
+ JLabel label2;
+ JLabel label3;
+ JLabel TopLabel;
+ final JTextField text1;
+ final JTextField text2;
  private static int attemp = 3;
 
  Login()
@@ -49,12 +53,10 @@ class Login extends Template implements ActionListener, Runnable
  text2.addFocusListener(new FocusListener()
  {
  public void focusGained(FocusEvent e)
- {
-
- }
+ {}
  public void focusLost(FocusEvent e)
  {
- label3.setText("");
+    label3.setText("");
  }
  });
 
@@ -86,7 +88,7 @@ _content.add(text1);
 
  pack();
  validate();
- ClockHome();
+ clockhome();
  setVisible(true);
  this.setSize(500,500);
  this.setResizable(false);
@@ -95,10 +97,8 @@ _content.add(text1);
  }
  public boolean validateusername(String Username, String password)
  {
- if((Username.length()<8)||(password.length() < 8))
- return false;
- else
- return true;
+    if((Username.length()<8)||(password.length() < 8))return false;
+    else return true;
  }
 
  public void actionPerformed(ActionEvent ae)
@@ -150,38 +150,37 @@ if(attemp == 0)
 
  public void run()
  {
- for(;;)
- {
- if(text2.isFocusOwner())
- {
- if( Toolkit.getDefaultToolkit().getLockingKeyState
-(KeyEvent.VK_CAPS_LOCK ) )
- {
- text2.setToolTipText("Warning : CAPS LOCK is on");
- }
- else
- text2.setToolTipText("");
+    for(;;)
+    {
+        if(text2.isFocusOwner())
+        {
+            if( Toolkit.getDefaultToolkit().getLockingKeyState(KeyEvent.VK_CAPS_LOCK ) )
+            {
+                text2.setToolTipText("Warning : CAPS LOCK is on");
+            }
+        else
+            text2.setToolTipText("");
 
- if((text2.getText()).length() < 8)
- label3.setText("Weak Password");
- else
- label3.setText("");
- }
- }
+        if((text2.getText()).length() < 8)
+            label3.setText("Weak Password");
+        else
+            label3.setText("");
+        }
+    }
  }
 }
 
 class Main
 {
- public static void main(String arg[])
- {
- try
- {
- Login frame=new Login();
- frame.setVisible(true);
- }
- catch(Exception e)
- {
- JOptionPane.showMessageDialog(null, e.getMessage());}
- }
+    public static void main(String arg[])
+    {
+        try
+        {
+            Login frame=new Login();
+            frame.setVisible(true);
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e.getMessage());}
+        }
 }

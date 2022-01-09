@@ -13,8 +13,11 @@ class InvalidFileException extends Exception
 
 public class UnpackFront extends Template implements ActionListener
 {
- JButton SUBMIT ,PREVIOUS;
- JLabel label1,label2, title ;
+ JButton SUBMIT ;
+ JButton PREVIOUS;
+ JLabel label1;
+ JLabel label2;
+ JLabel title ;
  final JTextField text1 ;
 
  public UnpackFront()
@@ -75,7 +78,8 @@ public class UnpackFront extends Template implements ActionListener
  try{
  Unpack obj = new Unpack(text1.getText());
  this.dispose();
- NextPage t = new NextPage("admin");
+ //NextPage t = new NextPage("admin");
+ obj.getClass();
  }
 catch(InvalidFileException obj)
  {
@@ -84,7 +88,7 @@ catch(InvalidFileException obj)
 
  JOptionPane.showMessageDialog(this, "Invalid Packed File","Error", JOptionPane.ERROR_MESSAGE);
 
- NextPage t = new NextPage("Madhur1234Admin");
+ //NextPage t = new NextPage("Madhur1234Admin");
  }
  catch(Exception e)
  {}
@@ -94,7 +98,7 @@ catch(InvalidFileException obj)
  {
  this.setVisible(false);
  this.dispose();
- NextPage t = new NextPage("admin");
+ //NextPage t = new NextPage("admin");
  }
  }
 }

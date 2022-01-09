@@ -33,7 +33,7 @@ class NextPage extends Template implements ActionListener
         _content.add(pack);
         _content.add(unpack);
 
-        ClockHome();
+        clockhome();
         this.setSize(600,600);
         this.setResizable(false);
         this.setVisible(true);

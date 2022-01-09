@@ -19,14 +19,8 @@ public class Packer
  {
  String Magic = "Madhur123456";
  byte arr[] = Magic.getBytes();
- File outfile =new File(Dest);
-
- File infile = null;
  outstream = new FileOutputStream(Dest);
  outstream.write(arr, 0, arr.length);
-
- File folder = new File(src);
-
  System.setProperty("user.dir",src);
  listAllFiles(src);
  }
@@ -51,7 +45,7 @@ public class Packer
  {
  File file=new File(filePath.getFileName().toString());
 
- Pack(file.getAbsolutePath());
+ packfile(file.getAbsolutePath());
  }
  }
  catch (Exception e)
@@ -67,7 +61,7 @@ public class Packer
  }
  }
 
- public void Pack(String filePath)
+ public void packfile(String filePath)
  {
  FileInputStream instream = null;
  try

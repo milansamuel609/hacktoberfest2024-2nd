@@ -84,11 +84,11 @@ getContentPane().add(_header,new GridBagConstraints(0,1,1,1,1,20,GridBagConstrai
  getContentPane().add(jsp,new GridBagConstraints(0,2,1,1,1,75,GridBagConstraints.BASELINE,GridBagConstraints.BOTH,new Insets(0,0,0,0),0,0));
  setTitle("File Packer-Unpacker");
 
- Clock();
- CloseAndMin();
+ clock();
+ closeandmin();
  }
 
- void CloseAndMin()
+ void closeandmin()
  {
  minimize=new JButton("-");
  minimize.setBackground(Color.LIGHT_GRAY);
@@ -108,20 +108,20 @@ getContentPane().add(_header,new GridBagConstraints(0,1,1,1,1,20,GridBagConstrai
  }
  public void actionPerformed(ActionEvent ae)
  {
- if ( ae.getSource() == exit )
+ if ( ae.getSource().equals(exit) )
  {
  this.setVisible(false);
  System.exit(0);
 
  }
- if ( ae.getSource() == minimize )
+ if ( ae.getSource().equals(minimize) )
  {
  setState(JFrame.ICONIFIED);
  }
  }
 
 
- void Clock ()
+ void clock ()
  {
  dateLable = new ClockLabel("date");
  timeLable = new ClockLabel("time");
@@ -142,7 +142,7 @@ getContentPane().add(_header,new GridBagConstraints(0,1,1,1,1,20,GridBagConstrai
  _header.add(dayLable);
  }
 
- void ClockHome()
+ void clockhome()
  {
  dateLable = new ClockLabel("date");
  timeLable = new ClockLabel("time");

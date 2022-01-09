@@ -18,7 +18,7 @@ public class Unpack
  FileInputStream instream = new FileInputStream(filePath);
 
  byte header[]= new byte[100];
- int length = 0;
+ int length = instream.read(header,0,100);
 
  byte Magic[] = new byte[12];
  instream.read(Magic,0,Magic.length);
@@ -29,7 +29,7 @@ public class Unpack
  throw new InvalidFileException("Invalid packed file format");
  }
 
- while((length = instream.read(header,0,100)) > 0)
+ while(length > 0)
  {
  String str = new String(header);
 
