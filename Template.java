@@ -56,7 +56,8 @@ class Template extends JFrame implements Serializable,ActionListener
  ClockLabel timeLable;
  ClockLabel dateLable;
 
- JButton minimize , exit;
+ JButton minimize ;
+ JButton exit;
 
  public Template()
  {

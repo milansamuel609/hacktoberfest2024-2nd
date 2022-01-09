@@ -97,8 +97,7 @@ _content.add(text1);
  }
  public boolean validateusername(String Username, String password)
  {
-    if((Username.length()<8)||(password.length() < 8))return false;
-    else return true;
+    return ((Username.length()<8)||(password.length() < 8));
  }
 
  public void actionPerformed(ActionEvent ae)
@@ -119,7 +118,7 @@ _content.add(text1);
 
  if(ae.getSource()==SUBMIT)
  {
- if(validateusername(value1,value2) == false)
+ if(validateusername(value1,value2))
  {
  text1.setText("");
  text2.setText("");
