@@ -5,9 +5,13 @@ import java.awt.event.ActionListener;
 
 public class PackFront extends Template implements ActionListener
 {
- JButton SUBMIT ,PREVIOUS;
- JLabel label1,label2, title ;
- final JTextField text1,text2 ;
+ JButton SUBMIT ;
+ JButton PREVIOUS;
+ JLabel label1;
+ JLabel label2;
+ JLabel  title;
+ final JTextField text1;
+ final JTextField text2 ;
 
  public PackFront()
  {
@@ -78,9 +82,9 @@ public class PackFront extends Template implements ActionListener
  {
  try
  {
- Packer obj=new Packer(text1.getText(),text2.getText());
+ //Packer obj=new Packer(text1.getText(),text2.getText());
  this.dispose();
- NextPage t = new NextPage("Madhur1234Admin");
+ //NextPage t = new NextPage("Madhur1234Admin");
  }
  catch(Exception e){}
  }
@@ -88,7 +92,7 @@ public class PackFront extends Template implements ActionListener
  {
  this.setVisible(false);
  this.dispose();
- NextPage t = new NextPage("Madhur1234Admin");
+ //NextPage t = new NextPage("Madhur1234Admin");
  }
  }
 }

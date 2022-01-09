@@ -93,7 +93,7 @@ _content.add(text1);
  setLocationRelativeTo(null);
  SUBMIT.addActionListener(this);
  }
- public boolean Validate(String Username, String password)
+ public boolean validateusername(String Username, String password)
  {
  if((Username.length()<8)||(password.length() < 8))
  return false;
@@ -119,7 +119,7 @@ _content.add(text1);
 
  if(ae.getSource()==SUBMIT)
  {
- if(Validate(value1,value2) == false)
+ if(validateusername(value1,value2) == false)
  {
  text1.setText("");
  text2.setText("");
